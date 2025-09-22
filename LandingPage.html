@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snooker Hub - Play. Connect. Compete.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #00A651;
+        }
+        .text-primary {
+            color: #00A651;
+        }
+        .bg-accent {
+            background-color: #FFD700;
+        }
+        .text-accent {
+            color: #FFD700;
+        }
+        .btn-primary {
+            background-color: #00A651;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #008a45;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-outline {
+            border: 2px solid #00A651;
+            color: #00A651;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background-color: #00A651;
+            color: white;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1714564209284-1ba07d735e76?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-[#121212] shadow-lg py-4 px-6 lg:px-12 fixed w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        
+        <!-- Logo -->
+        <div class="flex items-center">
+        <img src="Logo.png" alt="Snooker Hub Logo" class="w-10 h-10 rounded-full mr-2 shadow-md">
+        <span class="text-2xl font-extrabold text-white tracking-wide">
+            Snooker <span class="text-green-500">Hub</span>
+        </span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 items-center">
+        <a href="#" class="font-medium text-gray-300 hover:text-green-500 transition">Home</a>
+        <a href="#about" class="font-medium text-gray-300 hover:text-green-500 transition">About Us</a>
+        <a href="#pricing" class="font-medium text-gray-300 hover:text-green-500 transition">Pricing</a>
+        <a href="#tournaments" class="font-medium text-gray-300 hover:text-green-500 transition">Tournaments</a>
+        <a href="#contact" class="font-medium text-gray-300 hover:text-green-500 transition">Contact</a>
+        </div>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden md:flex space-x-4">
+        <button class="px-4 py-2 rounded-full font-semibold text-gray-300 border border-gray-600 hover:border-green-500 hover:text-green-500 transition">
+            Login
+        </button>
+        <button class="px-4 py-2 rounded-full font-semibold bg-green-600 text-white hover:bg-green-700 shadow-md transition">
+            Sign Up
+        </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-gray-300 hover:text-green-500">
+        <i data-feather="menu"></i>
+        </button>
+    </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section relative min-h-screen flex items-center bg-black text-white pt-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
+        
+        <!-- Left Content -->
+        <div class="max-w-2xl text-center lg:text-left" data-aos="fade-right">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Welcome to <span class="text-green-500">SNOOKER</span> HUB
+        </h1>
+        <p class="text-lg md:text-xl mb-8 text-gray-300">
+            Book your table online, join thrilling tournaments, and experience snooker like never before.
+        </p>
+        <button class="bg-green-500 hover:bg-green-600 text-black font-semibold px-8 py-3 rounded-full text-lg transition">
+            BOOK A TABLE
+        </button>
+        </div>
+
+        <!-- Right Image -->
+        <div class="lg:w-1/2 flex justify-center relative" data-aos="fade-left">
+        <img src="heropic.png" alt="Snooker Balls" 
+            class="max-w-sm md:max-w-md lg:max-w-lg drop-shadow-2xl relative z-10">
+        </div>
+    </div>
+
+    <!-- Gradient Fade at Bottom -->
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-[#0d0d0d] z-0"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 lg:px-12 bg-gradient-to-b from-[#0d0d0d] to-[#000000] text-white relative z-10">
+    <div class="max-w-7xl mx-auto">
+        <!-- Text + Image -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Left Content -->
+        <div class="lg:w-1/2" data-aos="fade-right">
+            <h2 class="text-3xl font-extrabold mb-6">
+            The Best Snooker Experience is at 
+            <span class="bg-gradient-to-r from-[#03C05D] to-green-700 bg-clip-text text-transparent tracking-wide">SNOOKER</span> 
+            <span class="text-white">Hub</span>
+            </h2>
+            <p class="text-gray-300 mb-6">
+            Snooker Hub is more than just a club – it's a community of passionate players. 
+            Our state-of-the-art tables, professional-grade equipment, and welcoming atmosphere 
+            make us the premier destination for snooker enthusiasts of all skill levels.
+            </p>
+            <p class="text-gray-300">
+            Whether you're looking for casual play, competitive tournaments, or professional coaching, 
+            we have everything you need to elevate your game.
+            </p>
+        </div>
+
+        <!-- Right Image -->
+        <div class="lg:w-1/2" data-aos="fade-left">
+            <img src="Table.png" alt="Snooker Table" class="rounded-xl">
+        </div>
+        </div>
+
+
+            <!-- Contact / Timing / Address -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
+
+            <!-- Phone -->
+            <div class="bg-[#121212] border border-gray-700 rounded-xl shadow-lg p-6 flex items-center gap-4 hover:shadow-2xl transition duration-300">
+                <div class="bg-[#03C05D]/20 p-3 rounded-full">
+                <i data-feather="phone" class="text-[#03C05D] w-6 h-6"></i>
+                </div>
+                <div>
+                <p class="text-sm text-gray-400">Contact Us</p>
+                <a href="tel:+92 324 4494986" class="text-lg font-semibold text-white hover:text-[#03C05D] transition">
+                    +92 324 4494986
+                </a>
+                </div>
+            </div>
+
+            <!-- Timing -->
+            <div class="bg-[#121212] border border-gray-700 rounded-xl shadow-lg p-6 flex items-center gap-4 hover:shadow-2xl transition duration-300">
+                <div class="bg-[#03C05D]/20 p-3 rounded-full">
+                <i data-feather="clock" class="text-[#03C05D] w-6 h-6"></i>
+                </div>
+                <div>
+                <p class="text-sm text-gray-400">Opening Hours</p>
+                <p class="text-lg font-semibold text-white">Mon–Sun: 10AM - 12AM</p>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="bg-[#121212] border border-gray-700 rounded-xl shadow-lg p-6 hover:shadow-2xl transition duration-300">
+                <div class="flex items-center gap-4 mb-4">
+                <div class="bg-[#03C05D]/20 p-3 rounded-full">
+                    <i data-feather="map-pin" class="text-[#03C05D] w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-400">Location</p>
+                    <p class="text-lg font-semibold text-white">
+                    Branch Walton Rd, Madina Colony, Lahore, 54000
+                    </p>
+                </div>
+                </div>
+                <a href="https://maps.app.goo.gl/aMVSyUHuiHeHuZgp7" target="_blank" 
+                class="inline-block bg-[#03C05D] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition">
+                View on Map
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="relative py-20 px-6 lg:px-12 bg-gradient-to-r from-[#1a1a1a] to-[#0d0d0d] text-white">
+    
+    <!-- Fade at the top -->
+    <div class="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[#121212] to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto z-10">
+        <h2 class="text-4xl font-extrabold text-center mb-16">
+        Relax, Refresh & Play at <span class="text-[#03C05D]">Snooker Hub</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Feature Card -->
+        <div class="bg-[#121212] p-10 rounded-2xl shadow-xl text-center hover:scale-105 hover:shadow-[#03C05D]/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-[#03C05D] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#03C05D]/50">
+            <i data-feather="coffee" class="text-white w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Just Relax</h3>
+            <p class="text-gray-300">Chill in our comfy lounge and enjoy refreshments between your snooker sessions.</p>
+        </div>
+
+        <!-- Feature Card -->
+        <div class="bg-[#121212] p-10 rounded-2xl shadow-xl text-center hover:scale-105 hover:shadow-[#03C05D]/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-[#03C05D] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#03C05D]/50">
+            <i data-feather="shopping-bag" class="text-white w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Eat Well</h3>
+            <p class="text-gray-300">Fuel your game with snacks and beverages from our café — perfect for long playing hours.</p>
+        </div>
+
+        <!-- Feature Card -->
+        <div class="bg-[#121212] p-10 rounded-2xl shadow-xl text-center hover:scale-105 hover:shadow-[#03C05D]/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-[#03C05D] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#03C05D]/50">
+            <i data-feather="activity" class="text-white w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Play On</h3>
+            <p class="text-gray-300">Enjoy premium snooker tables and pro equipment designed for a world-class experience.</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Perks Section -->
+    <section class="py-20 px-6 lg:px-12 bg-gradient-to-r from-[#1a1a1a] to-[#0d0d0d] text-white relative">
+    <div class="max-w-7xl mx-auto text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
+        Why Choose <span class="text-[#03C05D]">Snooker Hub?</span>
+        </h2>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+        A world-class snooker destination with seamless booking, premium facilities,
+        and a welcoming community.
+        </p>
+    </div>
+
+    <!-- Perks Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card -->
+        <div class="bg-[#121212] p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="zoom-in">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#03C05D]/10 mb-6">
+            <i data-feather="award" class="text-[#03C05D] w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Tournament-Grade Tables</h3>
+        <p class="text-gray-400">Play on 5 premium Rasson tables with professional cloth — built for tournaments and serious practice.</p>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-[#121212] p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#03C05D]/10 mb-6">
+            <i data-feather="users" class="text-[#03C05D] w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Community & Events</h3>
+        <p class="text-gray-400">Join exciting tournaments, meet new players, and be part of a thriving snooker community.</p>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-[#121212] p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#03C05D]/10 mb-6">
+            <i data-feather="smartphone" class="text-[#03C05D] w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Easy Booking</h3>
+        <p class="text-gray-400">Reserve tables anytime and pay easily via Easypaisa or JazzCash — quick and simple.</p>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-[#121212] p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="300">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#03C05D]/10 mb-6">
+            <i data-feather="coffee" class="text-[#03C05D] w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Snacks & Café</h3>
+        <p class="text-gray-400">Take a break and enjoy fresh snacks and drinks to recharge between matches.</p>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-[#121212] p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="400">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#03C05D]/10 mb-6">
+            <i data-feather="wifi" class="text-[#03C05D] w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Free WiFi</h3>
+        <p class="text-gray-400">Stay connected while you play, stream, or relax in our club environment.</p>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-[#121212] p-8 rounded-2xl shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="500">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[#03C05D]/10 mb-6">
+            <i data-feather="smile" class="text-[#03C05D] w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Premium Experience</h3>
+        <p class="text-gray-400">Play in a professional yet welcoming atmosphere crafted for snooker lovers of all levels.</p>
+        </div>
+    </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-6 lg:px-12 bg-gradient-to-r from-[#1a1a1a] to-[#0d0d0d] text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-extrabold mb-12">
+        Snooker Hub <span class="text-[#03C05D]">Pricing</span>
+        </h2>
+
+        <div class="bg-[#121212] rounded-2xl shadow-2xl p-10 relative overflow-hidden border border-gray-800">
+        <!-- Accent Top Border -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#03C05D] to-green-700"></div>
+
+        <!-- Price List -->
+        <ul class="space-y-6 text-left">
+            <!-- Item -->
+            <li class="flex justify-between items-center border-b border-gray-700 pb-3">
+            <span class="text-lg font-medium text-gray-300">Single Frame (10 Balls)</span>
+            <span class="text-2xl font-bold text-[#03C05D]">Rs 160</span>
+            </li>
+
+            <!-- Item -->
+            <li class="flex justify-between items-center border-b border-gray-700 pb-3">
+            <span class="text-lg font-medium text-gray-300">Single Frame (15 Balls)</span>
+            <span class="text-2xl font-bold text-[#03C05D]">Rs 190</span>
+            </li>
+
+            <!-- Item -->
+            <li class="flex justify-between items-center border-b border-gray-700 pb-3">
+            <span class="text-lg font-medium text-gray-300">Double Frame</span>
+            <span class="text-2xl font-bold text-[#03C05D]">Rs 380</span>
+            </li>
+
+            <!-- Item -->
+            <li class="flex justify-between items-center border-b border-gray-700 pb-3">
+            <span class="text-lg font-medium text-gray-300">Century (Per Minute)</span>
+            <span class="text-2xl font-bold text-[#03C05D]">Rs 13</span>
+            </li>
+
+            <!-- Item -->
+            <li class="flex justify-between items-center">
+            <span class="text-lg font-medium text-gray-300">Table Booking (Per Hour)</span>
+            <span class="text-2xl font-bold text-[#03C05D]">Rs 1000</span>
+            </li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="mt-10 text-center">
+            <button class="px-8 py-3 bg-[#03C05D] text-white font-semibold rounded-lg shadow-md hover:bg-green-700 hover:scale-105 transition-all duration-300">
+             Book a Table Now
+            </button>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Tournaments Section -->
+    <section id="tournaments" class="py-20 px-6 lg:px-12 bg-gradient-to-r from-[#1a1a1a] to-[#0d0d0d] text-white">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-16 text-white">
+        Upcoming <span class="text-[#03C05D]">Tournaments</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Tournament Card -->
+        <div class="bg-[#121212] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1488923566472-4b2d13a4af3b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c25vb2tlcnxlbnwwfHwwfHx8MA%3D%3D" 
+            alt="Snooker Tournament" class="w-full h-48 object-cover">
+            <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Weekly Amateur Cup</h3>
+            <div class="flex items-center text-gray-400 mb-3">
+                <i data-feather="calendar" class="mr-2"></i>
+                <span>Every Saturday, 2PM</span>
+            </div>
+            <div class="flex items-center text-gray-400 mb-6">
+                <i data-feather="dollar-sign" class="mr-2"></i>
+                <span>Entry Fee: PKR 1,000</span>
+            </div>
+            <button class="w-full py-2 rounded-lg font-semibold bg-[#03C05D] text-white hover:bg-green-700 transition">
+                Register Now
+            </button>
+            </div>
+        </div>
+
+        <!-- Tournament Card -->
+        <div class="bg-[#121212] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1651158752557-7b535a968188?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D" 
+            alt="Pro Challenge" class="w-full h-48 object-cover">
+            <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Monthly Pro Challenge</h3>
+            <div class="flex items-center text-gray-400 mb-3">
+                <i data-feather="calendar" class="mr-2"></i>
+                <span>First Sunday, 4PM</span>
+            </div>
+            <div class="flex items-center text-gray-400 mb-6">
+                <i data-feather="dollar-sign" class="mr-2"></i>
+                <span>Entry Fee: PKR 2,500</span>
+            </div>
+            <button class="w-full py-2 rounded-lg font-semibold bg-[#03C05D] text-white hover:bg-green-700 transition">
+                Register Now
+            </button>
+            </div>
+        </div>
+
+        <!-- Tournament Card -->
+        <div class="bg-[#121212] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://images.unsplash.com/photo-1730581042361-4c14470a4550?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8" 
+            alt="Annual Championship" class="w-full h-48 object-cover">
+            <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Annual Championship</h3>
+            <div class="flex items-center text-gray-400 mb-3">
+                <i data-feather="calendar" class="mr-2"></i>
+                <span>Dec 15-20, 6PM</span>
+            </div>
+            <div class="flex items-center text-gray-400 mb-6">
+                <i data-feather="dollar-sign" class="mr-2"></i>
+                <span>Entry Fee: PKR 5,000</span>
+            </div>
+            <button class="w-full py-2 rounded-lg font-semibold bg-[#03C05D] text-white hover:bg-green-700 transition">
+                Register Now
+            </button>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+        <button class="px-6 py-3 rounded-full font-semibold border border-[#03C05D] text-[#03C05D] hover:bg-[#03C05D] hover:text-white transition">
+            View All Tournaments
+        </button>
+        </div>
+    </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 px-6 lg:px-12 bg-gradient-to-r from-[#1a1a1a] to-[#0d0d0d] text-white">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-12 text-white">
+        What Our <span class="text-[#03C05D]">Players Say</span>
+        </h2>
+
+        <!-- Reviews Grid -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up">
+
+        <!-- Review 1 -->
+        <div class="bg-[#121212] rounded-xl shadow-md p-6 text-left hover:shadow-lg transition">
+            <div class="flex items-center mb-4">
+            <div class="bg-[#03C05D]/20 text-[#03C05D] font-bold rounded-full w-10 h-10 flex items-center justify-center">A</div>
+            <div class="ml-3">
+                <p class="font-semibold text-white">Ahsan Hashmi</p>
+                <p class="text-sm text-gray-400">5 reviews · 11 photos</p>
+            </div>
+            </div>
+            <div class="flex text-yellow-400 mb-3">★★★★★</div>
+            <p class="text-gray-300">
+            Best place for snooker lovers in Walton. Professional setup, perfect tables, and a welcoming vibe.
+            </p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-[#121212] rounded-xl shadow-md p-6 text-left hover:shadow-lg transition">
+            <div class="flex items-center mb-4">
+            <div class="bg-[#03C05D]/20 text-[#03C05D] font-bold rounded-full w-10 h-10 flex items-center justify-center">L</div>
+            <div class="ml-3">
+                <p class="font-semibold text-white">Liam Khan</p>
+                <p class="text-sm text-gray-400">2 reviews</p>
+            </div>
+            </div>
+            <div class="flex text-yellow-400 mb-3">★★★★★</div>
+            <p class="text-gray-300">
+            The tables are in excellent condition, and the staff is really helpful. A perfect spot to improve your game.
+            </p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-[#121212] rounded-xl shadow-md p-6 text-left hover:shadow-lg transition">
+            <div class="flex items-center mb-4">
+            <div class="bg-[#03C05D]/20 text-[#03C05D] font-bold rounded-full w-10 h-10 flex items-center justify-center">U</div>
+            <div class="ml-3">
+                <p class="font-semibold text-white">Usama Awan</p>
+                <p class="text-sm text-gray-400">1 review</p>
+            </div>
+            </div>
+            <div class="flex text-yellow-400 mb-3">★★★★★</div>
+            <p class="text-gray-300">
+            Great environment for serious snooker practice. Respectful staff and professional atmosphere.
+            </p>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white py-16 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="Logo.png" alt="Snooker Hub Logo" class="w-10 h-10 rounded-full mr-2 shadow-md">
+                        <span class="text-2xl font-extrabold text-white tracking-wide">
+                        Snooker <span class="text-green-500">Hub</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Play. Connect. Compete.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#121212] flex items-center justify-center hover:bg-primary transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#121212] flex items-center justify-center hover:bg-primary transition">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#121212] flex items-center justify-center hover:bg-primary transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="#tournaments" class="text-gray-400 hover:text-white transition">Tournaments</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-3 mt-1"></i>
+                            <span class="text-gray-400">Branch Walton Rd, Madina Colony, Lahore, 54000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-3 mt-1"></i>
+                            <span class="text-gray-400">info@snookerhub.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-3 mt-1"></i>
+                            <span class="text-gray-400">+92 324 4494986</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>© 2025 Snooker Hub ~ By Zain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
